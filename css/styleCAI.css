@@ -1,0 +1,19 @@
+
+.blocImage{
+	width:230px;
+	height:230px;
+	border: solid 2px black;
+	padding: 25px;
+	margin-left: 80px;
+	border-radius: 20px;
+}
+.heater-door{
+	width:150px;
+	height:150px;
+	border: solid 2px blue;
+	padding: 15px;
+	margin-left: 80px;
+}
+.col-s-6{
+	margin-bottom: 20px
+}
