@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Réglages</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="site.css">
+    <style type="text/css">
+    .navbar .navbar-toggler {
+        border: none;
+    }
+    .navbar .nav-item .nav-link {
+        padding-left: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .navbar .navbar-nav li {
+        margin-top: 5px;
+    }
+    .navbar .navbar-nav .separ {
+        border-top: 1px solid gray;
+        margin-left: -2%;
+        width: 102%;
+        margin-top: 5px;
+    }
+    .navbar .navbar-nav .separ.bold {
+        border-top: 2px solid black;
+    }
+    #zoomtext {
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+    }
+    </style>
+  </head>
+  <body>
+  	 <nav class="navbar navbar-light bg-light">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#caiNavbar" aria-controls="caiNavbar" aria-expanded="false" aria-label="Toggle menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Réglages</a>
+        <img src="wifi.svg" style="width: 32px" />
+        <div class="navbar-collapse collapse" id="caiNavbar" style="">
+            <ul class="navbar-nav mr-auto fa-ul">
+                <li class="nav-item"> <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-home"></i></span>Accueil</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-chart-line"></i></span>Consommation</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-cog"></i></span>R&eacute;glages</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg far fa-clock"></i></span>Dur&eacute;e</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-info"></i></span>Aide</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-sign-out-alt"></i></span>D&eacute;connexion</a>
+                </li>
+                <span class="separ bold"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg far fa-question-circle"></i></span>Question</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-lock"></i></span>Confidentialit&eacute;</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-phone"></i></span>Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  	<div>
+    	  <section class="container_reglages">
+                <div class="item-1"> <div  class="btn-group"  >
+            
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Compte Utilisateur
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Créer</button>
+                          <button class="dropdown-item" type="button">Éditer</button>
+                          <button class="dropdown-item" type="button">Supprimer</button>
+                        </div>
+                </div> </div>           
+                <div class="item-2"> <div  class="btn-group"  >
+            
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Interface Familiale
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Créer</button>
+                          <button class="dropdown-item" type="button">Éditer</button>
+                          <button class="dropdown-item" type="button">Supprimer</button>
+                        </div>
+                </div> </div>
+                
+                <div class="item-3"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Interface Enfant
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Créer</button>
+                          <button class="dropdown-item" type="button">Éditer</button>
+                          <button class="dropdown-item" type="button">Supprimer</button>
+                        </div>
+                </div> </div>
+            
+                <div class="item-4"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Alertes
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Ajouter une Nouvelle Alerte </button>
+                          <button class="dropdown-item" type="button">Supprimer une Alerte</button>
+                        </div>
+                </div> </div>
+                <div class="item-5"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Plugins
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Installer un nouveau Plugin</button>
+                          <button class="dropdown-item" type="button">Activer un nouveau Plugin</button>
+                        </div>
+                </div> </div>
+                <div class="item-6"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ajouter un Nouveau Plan
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Ajouter</button>
+                          <button class="dropdown-item" type="button">Éditer</button>
+                          <button class="dropdown-item" type="button">Supprimer un Plan</button>
+                        </div>
+                </div> </div>
+                <div class="item-7"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ajouter un Nouveau Appareil
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Ajouter</button>
+                          <button class="dropdown-item" type="button">Éditer</button>
+                          <button class="dropdown-item" type="button">Supprimer un Appareil</button>
+                        </div>
+                </div> </div>
+                <div class="item-8"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Aide
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Version</button>
+                          <button class="dropdown-item" type="button">Commentaire</button>
+                        </div>
+                </div> </div>
+                <div class="item-9"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary dropdown-toggle btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Autres
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" type="button">Action</button>
+                          <button class="dropdown-item" type="button">Another action</button>
+                          <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                </div> </div>
+        </section>
+        
+	</div>
+  </body>
+</html>
