@@ -1,0 +1,21 @@
+.blocImage{
+	width:230px;
+	height:230px;
+	border: solid 2px #5fbae9;
+	padding: 25px;
+	margin-left: 180px;
+	border-radius: 20px;
+}
+
+.col-s-6{
+	margin-bottom: 20px
+}
+.titulo{
+	width:270px;
+	height:230px;
+	border: solid 2px black;
+	padding: 5px;
+	border-radius: 20px;
+	justify-content: center;
+	margin-left: 80px;	
+}
