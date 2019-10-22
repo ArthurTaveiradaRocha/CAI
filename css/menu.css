@@ -13,12 +13,10 @@
 }
 
 .navbar .navbar-nav .separ {
-    border-top: 1px solid gray;
+    border-top: 1px solid #5fbae9;
     margin-left: -2%;
     width: 102%;
     margin-top: 5px;
 }
 
-.navbar .navbar-nav .separ.bold {
-    border-top: 2px solid black;
-}
+

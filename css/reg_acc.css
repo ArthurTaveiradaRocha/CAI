@@ -1,15 +1,16 @@
 body {
-	font-family: helvetica, sans-serif;
-	text-align: center;
+  font-family: helvetica, sans-serif;
+  text-align: center;
 }
 
 img{
-	width: 70px;
-	justify-content: center;
+  width: 70px;
+  justify-content: center;
 }
 
 h2{
-	text-align: center;
+  text-align: center;
+  color: #5fbae9;
 }
 
 .container_2 {
@@ -33,15 +34,19 @@ h2{
   grid-row: 1;
 }
 
-.allumes {
+.btn_allumes {
     width: 150px;
     height: 150px;
-    background: #ff9800;
+    background-color:  yellow;
+    border: solid transparent;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 4px;
 }
 
 .allumes:hover {
     background: #ff9800;
-    color: white;
+    color: yellow;
 }
 
 .container_3 {
