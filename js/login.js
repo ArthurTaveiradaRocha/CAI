@@ -80,16 +80,22 @@ function clearErrors() {
 }
 
 function register() {
-	if ($("#password").val() != $("#confirmPassword").val()) {
+	if ($("#login").val() == "" || $("#password").val() == "" || $("#confirmPassword").val() == "" || $("#name").val() == "") {
 		Swal.fire(
 		  'Erreur',
-		  'Veuillez saisir le m&ecirc;me mot de passe dans les deux champs pr&eacute;vus &agrave; cet effet !',
+		  'Vous devez remplir tous les champs !',
 		  'error'
 		);
 	} else if(!validateEmail($("#login").val())) {
 		Swal.fire(
 		  'Erreur',
 		  '"'+$("#login").val()+'" n\'est pas une adresse valide !"',
+		  'error'
+		);
+	} else if ($("#password").val() != $("#confirmPassword").val()) {
+		Swal.fire(
+		  'Erreur',
+		  'Veuillez saisir le m&ecirc;me mot de passe dans les deux champs pr&eacute;vus &agrave; cet effet !',
 		  'error'
 		);
 	} else {
