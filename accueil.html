@@ -85,15 +85,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
   	<div>
-    	<h2>Appareils Allumés</h2>
+          <br/>
+        <h2>Appareils Allumés</h2>
+        <br/>
 
     	<section class="container_2">
-    		<div class="first_img"><button class="btn allumes"><img src="computer.png" alt="tv"/></button></div>
-  			<div class="second_img"><button class="btn allumes"><img src="lampe.png" alt="lamp"/></button></div>
-  			<div class="third_img"><button class="btn allumes"><img src="heater.png" alt="chaufage"/></button></div>
+    		<div class="first_img"><button class="btn_allumes" id="img1"><img src="computer.png" alt="tv"/></button></div>
+  			<div class="second_img"><button class="btn_allumes" id="img2"><img src="lampe.png" alt="lamp"/></button></div>
+  			<div class="third_img"><button class="btn_allumes" id="img3"><img src="heater.png" alt="chaufage"/></button></div>
   		</section>
-
+        <hr>
         <h2>Plan</h2>
+        <br/>
         
         <button class="open-button" id="zoomIn" onclick="openForm()">+Zoom</button>
 
@@ -154,18 +157,123 @@
             <div class="item-g"><button class="btn sejour">Sejour</button></div>
             <div class="item-h"><a href="cuisine.html"><button class="btn cuisine">Cuisine</button></a></div>
         </section>
-        
+        <hr>
         <h2>Souvent Utilisé</h2>
-
+        <br/>
     	<section class="container_3">
 
-    		<div class="one_img"><button class="btn souvent"><img src="lampe.png" alt="lamp"/></button></div>
-  			<div class="two_img"><button class="btn souvent"><img src="computer.png" alt="tv"/></button></div>
-  			<div class="three_img"><button class="btn souvent"><img src="heater.png" alt="chaufage"/></button></div>
-  			<div class="four_img"><button class="btn souvent"><img src="oven.png" alt="oven"/></button></div>
-  			<div class="five_img"><button class="btn souvent"><img src="micro-onde.png" alt="microondes"/></button></div>
-  			<div class="six_img"><button class="btn souvent"><img src="washing-machine.png" alt="washing-machine"/></button></div>
-  		</section>
+    		<div class="one_img"><button class="btn souvent" id="img4"><img src="lampe.png" alt="lamp"/></button></div>
+  			<div class="two_img"><button class="btn souvent" id="img5"><img src="computer.png" alt="tv"/></button></div>
+  			<div class="three_img"><button class="btn souvent" id="img6"><img src="heater.png" alt="chaufage"/></button></div>
+  			<div class="four_img"><button class="btn souvent" id="img7"><img src="oven.png" alt="oven"/></button></div>
+  			<div class="five_img"><button class="btn souvent" id="img8"><img src="micro-onde.png" alt="microondes"/></button></div>
+  			<div class="six_img"><button class="btn souvent" id="img9"><img src="washing-machine.png" alt="washing-machine"/></button></div>
+        </section>
+          
+        <script type="text/javascript">
+  
+            var element1= document.getElementById('img1');
+            var element2= document.getElementById('img2');
+            var element3= document.getElementById('img3');
+            var element4= document.getElementById('img4');
+            var element5= document.getElementById('img5');
+            var element6= document.getElementById('img6');
+            var element7= document.getElementById('img7');
+            var element8= document.getElementById('img8');
+            var element9= document.getElementById('img9');
+            element1.addEventListener('click', clickHandler1);
+            element2.addEventListener('click', clickHandler2);
+            element3.addEventListener('click', clickHandler3);
+            element4.addEventListener('click', clickHandler4);
+            element5.addEventListener('click', clickHandler5);
+            element6.addEventListener('click', clickHandler6);
+            element7.addEventListener('click', clickHandler7);
+            element8.addEventListener('click', clickHandler8);
+            element9.addEventListener('click', clickHandler9);
+            
+        function clickHandler1(){ // declare a function that updates the state
+         if(element1.style.backgroundColor=="white")
+         {
+             element1.style.backgroundColor="yellow"
+         }
+         else{
+             element1.style.backgroundColor = "white";
+             }
+         }
+        function clickHandler2(){ // declare a function that updates the state
+           if(element2.style.backgroundColor=="white")
+         {
+             element2.style.backgroundColor="yellow"
+         }
+         else{
+             element2.style.backgroundColor = "white";
+             }
+        }
+        function clickHandler3(){ // declare a function that updates the state
+           if(element3.style.backgroundColor=="white")
+         {
+             element3.style.backgroundColor="yellow"
+         }
+         else{
+             element3.style.backgroundColor = "white";
+             }
+        }
+        function clickHandler4(){ // declare a function that updates the state
+           if(element4.style.backgroundColor=="yellow")
+         {
+             element4.style.backgroundColor="white"
+         }
+         else{
+             element4.style.backgroundColor = "yellow";
+             }
+        }
+        function clickHandler5(){ // declare a function that updates the state
+           if(element5.style.backgroundColor=="yellow")
+         {
+             element5.style.backgroundColor="white"
+         }
+         else{
+             element5.style.backgroundColor = "yellow";
+             }
+        }
+        function clickHandler6(){ // declare a function that updates the state
+          if(element6.style.backgroundColor=="yellow")
+         {
+             element6.style.backgroundColor="white"
+         }
+         else{
+             element6.style.backgroundColor = "yellow";
+             }
+        }
+        function clickHandler7(){ // declare a function that updates the state
+           if(element7.style.backgroundColor=="yellow")
+         {
+             element7.style.backgroundColor="white"
+         }
+         else{
+             element7.style.backgroundColor = "yellow";
+             }
+        }
+        function clickHandler8(){ // declare a function that updates the state
+           if(element8.style.backgroundColor=="yellow")
+         {
+             element8.style.backgroundColor="white"
+         }
+         else{
+             element8.style.backgroundColor = "yellow";
+             }
+        }
+        function clickHandler9(){ // declare a function that updates the state
+           if(element9.style.backgroundColor=="yellow")
+         {
+             element9.style.backgroundColor="white"
+         }
+         else{
+             element9.style.backgroundColor = "yellow";
+             }
+        }
+        
+        </script>
     
 	</div>
   </body>

@@ -1,0 +1,363 @@
+body {
+	font-family: helvetica, sans-serif;
+	text-align: center;
+}
+
+img{
+	width: 70px;
+	justify-content: center;
+}
+
+h2{
+	text-align: center;
+}
+
+.container_2 {
+  display: grid;
+  grid-template-columns: 118px 118px 118px;
+  grid-area: 118px 85px 117px;
+  grid-template-rows: 160px;
+  grid-auto-flow: row;
+  justify-content: space-around;
+}
+.first_img {
+  grid-column: 1;
+  grid-row: 1;
+}
+.second_img {
+  grid-column: 2;
+  grid-row: 1;
+}
+.third_img {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.btn_allumes {
+    width: 150px;
+    height: 150px;
+    background-color:  yellow;
+}
+
+.allumes:hover {
+    background: #ff9800;
+    color: yellow;
+}
+
+.container_3 {
+  display: grid;
+  grid-template-columns: 118px 118px 118px;
+  grid-area: 118px 85px 117px;
+  grid-template-rows: 160px 160px;
+  grid-auto-flow: row;
+  justify-content: space-around;
+}
+.one_img {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two_img {
+  grid-column: 2;
+  grid-row: 1;
+}
+.three_img {
+  grid-column: 3;
+  grid-row: 1;
+}
+.four_img {
+  grid-column: 1;
+  grid-row: 2;
+}
+.five_img {
+  grid-column: 2;
+  grid-row: 2;
+}
+.six_img {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.souvent {
+    width: 150px;
+    height: 150px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 118px 118px 118px 118px 118px;
+  grid-area: 118px 85px 117px 110px 60px;
+  grid-template-rows: 98px 30px 110px;
+  grid-auto-flow: row;
+  justify-content: center;
+
+}
+
+.item-a {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-b {
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-c {
+  grid-column: 3;
+  grid-row: 1;
+}
+.item-d {
+  grid-column: 4;
+  grid-row: 1;
+}
+.item-e {
+  grid-column: 5;
+  grid-row: 1;
+}
+.item-f {
+  grid-column: 1;
+  grid-row: 2;
+}
+.item-g {
+  grid-column: 1;
+  grid-row: 3;
+}
+.item-h {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.btn {
+  border: solid transparent;
+  border-width: 2px;
+  border-color: black;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+/* Green */
+
+.chambre_1 {
+    color: yellow;
+    width: 119px;
+    height: 100px;
+
+}
+
+.chambre_1:hover {
+    background-color: #ffff00;
+    color: white;
+}
+.cuisine {
+    color: green;
+    width: 238px;
+    height: 100px;
+
+}
+
+.cuisine:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Blue */
+.Salle_de_Bain {
+    color: dodgerblue;
+    width: 119px;
+    height: 100px;
+}
+
+.Salle_de_Bain:hover {
+    background: #2196F3;
+    color: white;
+}
+
+/* Orange */
+.chambre_2 {
+    color: orange;
+    width: 119px;
+    height: 100px;
+}
+
+.chambre_2:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Red */
+.garage {
+    color: red;
+    width: 119px;
+    height: 228px;
+}
+
+.garage:hover {
+    background: #f44336;
+    color: white;
+}
+
+/* Gray */
+.couloir {
+    color: gray;
+    width: 473px;
+    height: 20px;
+    align-items: center;
+}
+.couloir:hover {
+    background: #e7e7e7;
+    color: white;
+}
+
+.chambre_3 {
+    color: pink;
+    width: 119px;
+    height: 100px;
+}
+
+.chambre_3:hover {
+    background: #ff1493;
+    color: white;
+}
+.sejour {
+    color: red;
+    width: 238px;
+    height: 100px;
+}
+
+.sejour:hover {
+    background: #ff0000;
+    color: white;
+}
+
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  justify-content: center;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  /*position: fixed;*/
+  justify-content: center;
+  grid-template-columns: 118px 118px 118px 118px 118px;
+  bottom: 0;
+  border: 3px solid #555;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  display: grid;
+  grid-template-columns: 118px 118px 118px 118px 118px;
+  grid-area: 118px 85px 117px 110px 60px;
+  grid-template-rows: 98px 30px 110px;
+  grid-auto-flow: row;
+  justify-content: center;
+  background-color: white;
+}
+
+.form-container .cancel {
+  background: #2196F3;
+}
+
+.form-container .fermer {
+  background: #2196F3;
+  right: 15px;
+}
+
+
+.container_reglages {
+  display: grid;
+  grid-template-columns: 100% ;
+  grid-area: 250px 250px 250px 250px 250px;
+  grid-template-rows: 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+  grid-auto-flow: row;
+  justify-content: center;
+
+}
+
+.item-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.item-3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.item-4 {
+  grid-column: 1;
+  grid-row: 4;
+}
+.item-5 {
+  grid-column: 1;
+  grid-row: 5;
+}
+.item-6 {
+  grid-column: 1;
+  grid-row: 6;
+}
+.item-7 {
+  grid-column: 1;
+  grid-row: 7;
+}
+.item-8 {
+  grid-column: 1;
+  grid-row: 8;
+}
+.item-9 {
+  grid-column: 1;
+  grid-row: 9;
+}
+.btn_reglages {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:  #5959ab;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  width: 1200px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn_reglages span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn_reglages span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn_reglages:hover span {
+  padding-right: 25px;
+}
+
+.btn_reglages:hover span:after {
+  opacity: 1;
+  right: 0;
+}
