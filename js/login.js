@@ -4,19 +4,16 @@ $(document).ready(function() {
     });
 });
 
-$(function() {
-    $('.page-alert').hide();
-    $('.page-alert .close').click(function(e) {
-        e.preventDefault();
-        $(this).closest('.page-alert').slideUp();
-    });
-});
-
 
 function login() {
-	$('.loginContent.first').addClass('getOut');
-	$('.loginContent.second').removeClass('getIn');
-	$('#loginFooter').html("Qui &ecirc;tes-vous ?");
+	if ($("#login").val() == "mail@exemple.fr" && $("#password").val() == "password") {
+		clearErrors();
+		$('.loginContent.first').addClass('getOut');
+		$('.loginContent.second').removeClass('getIn');
+		$('#loginFooter').html("Qui &ecirc;tes-vous ?");
+	} else {
+		appendError("Adresse mail ou mot de passe incorrect !");
+	}
 }
 
 function showRegister() {
@@ -56,7 +53,7 @@ function confirmLogin() {
 		  'Vous &ecirc;tes maintenant connect&eacute; au compte <strong>'+$('#login').val()+'</strong> en tant qu\'enfant!',
 		  'success'
 		).then((result) => {
-		    window.location.replace("menu.html");
+		    window.location.replace("enfant.html");
 		});
 	} else {
 		if($('#code').val() == "0000") {
@@ -65,21 +62,46 @@ function confirmLogin() {
 			  'Vous &ecirc;tes maintenant connect&eacute; au compte <strong>'+$('#login').val()+'</strong> en tant qu\'adulte!',
 			  'success'
 			).then((result) => {
-			    window.location.replace("menu.html");
+			    window.location.replace("accueil.html");
 			});
 		} else {
-			// $('.alert').removeClass('hide');
-			// $('.alert').addClass('show');
-			var t = (new Date()).getTime();
-			$("#alerts").append('<div class="alert alert-danger alert-dismissible fade show" id="alt'+t+'"><strong>Erreur: </strong>Code incorrect ! (le code est 0000)<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+			appendError("Code incorrect !");
 		}
 	}
 }
 
+function appendError(error) {
+	var t = (new Date()).getTime();
+	$("#alerts").append('<div class="alert alert-danger alert-dismissible fade show" id="alt'+t+'"><strong>Erreur: </strong> '+error+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+}
+
+function clearErrors() {
+	$("#alerts").html("");
+}
+
 function register() {
-	Swal.fire(
-	  'Succ&egrave;s!',
-	  'Votre inscription s\'est bien d&eacute;roul&eacute, '+$('#name').val()+'! Vous pouvez d&egrave;s &agrave; pr&eacute;sent <a href="login.html">vous connecter</a> avec vos identifiants.',
-	  'success'
-	);
+	if ($("#password").val() != $("#confirmPassword").val()) {
+		Swal.fire(
+		  'Erreur',
+		  'Veuillez saisir le m&ecirc;me mot de passe dans les deux champs pr&eacute;vus &agrave; cet effet !',
+		  'error'
+		);
+	} else if(!validateEmail($("#login").val())) {
+		Swal.fire(
+		  'Erreur',
+		  '"'+$("#login").val()+'" n\'est pas une adresse valide !"',
+		  'error'
+		);
+	} else {
+		Swal.fire(
+		  'Succ&egrave;s!',
+		  'Votre inscription s\'est bien d&eacute;roul&eacute, '+$('#name').val()+'! Vous pouvez d&egrave;s &agrave; pr&eacute;sent <a href="login.html">vous connecter</a> avec vos identifiants.',
+		  'success'
+		);
+	}
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
