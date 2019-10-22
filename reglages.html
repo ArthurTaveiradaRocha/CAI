@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
- <title>Ajout appareil</title>
+  <head>
+    <title>Réglages</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="ajout.css">
+    <link rel="stylesheet" href="reg_acc.css">
     <style type="text/css">
     .navbar .navbar-toggler {
         border: none;
@@ -27,15 +27,18 @@
     .navbar .navbar-nav .separ.bold {
         border-top: 2px solid black;
     }
+    #zoomtext {
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+    }
     </style>
-</head>
-
-<body>
-    <nav class="navbar navbar-light bg-light">
+  </head>
+  <body>
+  	 <nav class="navbar navbar-light bg-light">
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#caiNavbar" aria-controls="caiNavbar" aria-expanded="false" aria-label="Toggle menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Ajouter un appareil</a>
+        <a class="navbar-brand" href="#">Réglages</a>
         <img src="wifi.svg" style="width: 32px" />
         <div class="navbar-collapse collapse" id="caiNavbar" style="">
             <ul class="navbar-nav mr-auto fa-ul">
@@ -46,7 +49,7 @@
                     <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-chart-line"></i></span>Consommation</a>
                 </li>
                 <span class="separ"></span>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-cog"></i></span>R&eacute;glages</a>
                 </li>
                 <span class="separ"></span>
@@ -76,99 +79,74 @@
             </ul>
         </div>
     </nav>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-</body>
+  	<div>
+    	  <section class="container_reglages">
+                 <div class="item-1"><div  class="btn-group">
+                       <a href="profil.html"><button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;" >
+                            Compte utilisateur
+                        </button></a>
+                </div></div> 
 
-<body>
-	<h2 class="text-center">Ajouter un appareil</h2>
-	</br>
-		
-	<form method="post" action="cuisine.html">
-		<div align="center">
+                <div class="item-2"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Interface familiale
+                        </button>
+                </div> </div>
 
-			<div class="input-group">
+                <div class="item-3"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Interface enfant
+                        </button>
+                </div> </div>
 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Pièce</label>
-			  </div>
-			 
-			  <select class="custom-select" id="inputGroupSelect01" required>
-			    <option disabled selected >Choisir..</option>
-			    <option value="cuisine">Cuisine</option>
-				<option value="chambre1">Chambre 1</option>
-				<option value="chambre2">Chambre 2</option>
-				<option value="sejour">Séjour</option>
-				<option value="salleDeBain">Salle de bain</option>
-				<option value="wc">WC</option>
-				<option value="garage">Garage</option>
-			  </select>
+                <div class="item-4"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Alertes
+                        </button>
+                </div> </div>
+                <div class="item-5"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Plugins
+                        </button>
+                </div> </div>
+                <div class="item-6"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Ajouter un nouveau plan
+                        </button>
+                </div> </div>
+                <div class="item-7"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ajouter un nouvel appareil
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="ajoutAppareil.html"><button class="dropdown-item" type="button">Ajouter</button></a>
+                          <button class="dropdown-item" type="button">Éditer</button>
+                          <button class="dropdown-item" type="button">Supprimer un Appareil</button>
+                        </div>
+                </div> </div>
 
-			</div>
+                <div class="item-6"> <div  class="btn-group"  >
+                        <a href="chauffage.html"><button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Régler le chauffage
+                        </button></a>
+                </div> </div>
 
-			<div class="input-group">
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Appareil</label>
-			  </div>
-			  <select class="custom-select" id="inputGroupSelect01" required>
-			    <option disabled selected >Choisir..</option>
-			    <option value="cafetiere">Cafetière</option>
-				<option value="four">Four</option>
-				<option value="volet">Volet</option>
-				<option value="lampe">Lampe</option>
-				<option value="laveLinge">Lave-linge</option>
-			  </select>
-			</div>
-
-			<div class="input-group">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1">Puissance</span>
-			  </div>
-			  <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" required>
-			</div>
-
-			<div class="input-group">
-			  <div class="custom-file">
-			    <input type="file" class="custom-file-input" id="inputGroupFile02">
-			    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-			  </div>
-			  <div class="input-group-append">
-			  </div>
-			</div>
-
-			<div class="input-group">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1">Modèle</span>
-			  </div>
-			  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" required>
-			</div>
-
-
-			<div class="input-group">
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Prise</label>
-			  </div>
-			  <select class="custom-select" id="inputGroupSelect01" required>
-			    <option disabled selected >Choisir..</option>
-			    <option value="prise1">Prise 1</option>
-				<option value="prise2">Prise 2</option>
-				<option value="prise3">Prise 3</option>
-				<option value="prise4">Prise 4</option>
-			  </select>
-			</div>
-
-			<div class="custom-control custom-switch">
-			  <input type="checkbox" class="custom-control-input" id="customSwitch1">
-			  <label class="custom-control-label" for="customSwitch1">Accessible pour le profil enfants</label>
-			</div>
-			
-			<button type="submit" class="btn btn-primary" href="#" onclick="ajout()">Submit</button>
-		</div>
-	</form>
-	<script src="ajoutapp.js"></script>
-
-</body>
+                <div class="item-8"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Aide
+                        </button>
+                </div> </div>
+                <div class="item-9"> <div  class="btn-group"  >
+                        <button type="button" class="btn btn-secondary btn_reglages" style="vertical-align:middle ;">
+                                Autres
+                        </button>
+                </div> </div>
+        </section>
+        
+	</div>
+  </body>
 </html>

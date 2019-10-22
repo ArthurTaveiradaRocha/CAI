@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cuisine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style type="text/css">
+    .navbar .navbar-toggler {
+        border: none;
+    }
+    .navbar .nav-item .nav-link {
+        padding-left: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .navbar .navbar-nav li {
+        margin-top: 5px;
+    }
+    .navbar .navbar-nav .separ {
+        border-top: 1px solid gray;
+        margin-left: -2%;
+        width: 102%;
+        margin-top: 5px;
+    }
+    .navbar .navbar-nav .separ.bold {
+        border-top: 2px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#caiNavbar" aria-controls="caiNavbar" aria-expanded="false" aria-label="Toggle menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Maison Connect&eacute;e</a>
+        <img src="wifi.svg" style="width: 32px" />
+        <div class="navbar-collapse collapse" id="caiNavbar" style="">
+            <ul class="navbar-nav mr-auto fa-ul">
+                <li class="nav-item"> <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-home"></i></span>Accueil</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-chart-line"></i></span>Consommation</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-cog"></i></span>R&eacute;glages</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg far fa-clock"></i></span>Dur&eacute;e</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-info"></i></span>Aide</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-sign-out-alt"></i></span>D&eacute;connexion</a>
+                </li>
+                <span class="separ bold"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg far fa-question-circle"></i></span>Question</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-lock"></i></span>Confidentialit&eacute;</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-phone"></i></span>Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+</body>
+
+</html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Votre Cuisine connectee</title>
+	<link rel="stylesheet" href="cuisine.css" /> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<br/>
+<h1 style="text-align: center;"> Votre Cuisine Connectée</h1>
+	<br/>
+<hr>
+	<br/>
+<div style="display: flex">
+	<div>
+		<div class="row" style="margin-bottom: 10px">
+			<div class="col-s-6" >
+			<img src="lampe.png" alt="lampe" class="blocImage" id="lampe">
+			</div>
+			<div class="col-s-6" >	
+				<img src="micro-onde.png" alt="micro-onde" class="blocImage" id="micro-onde">
+			</div>
+			<div class="col-s-6" >	
+				<img src="computer.png" alt="computer" class="blocImage" id="computer">
+			</div>
+			<div class="col-s-6" >	
+				<img src="oven.png" alt="oven" class="blocImage" id="oven">
+			</div>
+			
+		</div>
+			<br/>
+		<div class="row">
+			<div class="col-s-6" >
+				<img src="drop.png" alt="drop" class="blocImage" id="drop">
+			</div>
+			<div class="col-s-6" >	
+				<img src="fridge.png" alt="fridge" class="blocImage" id="fridge">
+			</div>
+			<div class="col-s-6">	
+				<img src="window.png" alt="window" class="blocImage" id="window">
+			</div>
+			<div class="col-s-6" style="display: none;" id="ajout">	
+				<img src="washing-machine.png" alt="washing-machine" class="blocImage" id="washing-machine" >
+			</div>
+
+            <script type="text/javascript">  
+          
+                document.getElementById("washing-machine").onclick = function() {
+
+                }
+            </script>  
+		</div>
+	</div>
+<div>
+	<div>	
+				<img src="heater.png" alt="heater" class="heater-door">
+    </div>	
+	<div style="margin-top: 40px">	
+			<img src="door.png" alt="door" class="heater-door" id="door">
+	</div>
+</div>
+</div>
+</body>
+
+<script type="text/javascript">
+	var element1= document.getElementById('lampe');
+	var element2= document.getElementById('micro-onde');
+	var element3= document.getElementById('computer');
+	var element4= document.getElementById('oven');
+	var element5= document.getElementById('drop');
+	var element6= document.getElementById('fridge');
+	var element7= document.getElementById('window');
+	var element8= document.getElementById('washing-machine');
+	var element9= document.getElementById('door');
+	element1.addEventListener('click', clickHandler1);
+	element2.addEventListener('click', clickHandler2);
+	element3.addEventListener('click', clickHandler3);
+	element4.addEventListener('click', clickHandler4);
+	element5.addEventListener('click', clickHandler5);
+	element6.addEventListener('click', clickHandler6);
+	element7.addEventListener('click', clickHandler7);
+	element8.addEventListener('click', clickHandler8);
+	element9.addEventListener('click', clickHandler9);
+	
+function clickHandler1(){ // declare a function that updates the state
+ if(element1.style.backgroundColor=="yellow")
+ {
+ 	element1.style.backgroundColor="white"
+ }
+ else{
+ 	element1.style.backgroundColor = "yellow";
+     }
+ }
+function clickHandler2(){ // declare a function that updates the state
+   if(element2.style.backgroundColor=="yellow")
+ {
+ 	element2.style.backgroundColor="white"
+ }
+ else{
+ 	element2.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler3(){ // declare a function that updates the state
+   if(element3.style.backgroundColor=="yellow")
+ {
+ 	element3.style.backgroundColor="white"
+ }
+ else{
+ 	element3.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler4(){ // declare a function that updates the state
+   if(element4.style.backgroundColor=="yellow")
+ {
+ 	element4.style.backgroundColor="white"
+ }
+ else{
+ 	element4.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler5(){ // declare a function that updates the state
+   if(element5.style.backgroundColor=="yellow")
+ {
+ 	element5.style.backgroundColor="white"
+ }
+ else{
+ 	element5.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler6(){ // declare a function that updates the state
+  if(element6.style.backgroundColor=="yellow")
+ {
+ 	element6.style.backgroundColor="white"
+ }
+ else{
+ 	element6.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler7(){ // declare a function that updates the state
+   if(element7.style.backgroundColor=="yellow")
+ {
+ 	element7.style.backgroundColor="white"
+ }
+ else{
+ 	element7.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler8(){ // declare a function that updates the state
+   if(element8.style.backgroundColor=="yellow")
+ {
+ 	element8.style.backgroundColor="white"
+ }
+ else{
+ 	element8.style.backgroundColor = "yellow";
+     }
+}
+function clickHandler9(){ // declare a function that updates the state
+   if(element9.style.backgroundColor=="red")
+ {
+ 	element9.style.backgroundColor="white"
+ }
+ else{
+ 	element9.style.backgroundColor = "red";
+     }
+}
+</script>
+<script src="ajoutapp.js"></script>
+</html>
