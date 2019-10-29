@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>drag and drop with clone - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <style type="text/css">
+        #dropHere {
+    width:350px;
+    height: 350px;
+    border: 1px  dotted black;
+
+}
+
+div{
+
+  margin-top: 10px;
+
+}
+
+p span 
+{
+    display: block;
+    text-align: center;
+}
+  .navbar{
+z-index: 1;
+
+  }
+   .navbar .navbar-toggler {
+        border: none;
+    }
+    .navbar .nav-item .nav-link {
+        padding-left: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .navbar .navbar-nav li {
+        margin-top: 5px;
+    }
+    .navbar .navbar-nav .separ {
+        border-top: 1px solid gray;
+        margin-left: -2%;
+        width: 102%;
+        margin-top: 5px;
+    }
+    .navbar .navbar-nav .separ.bold {
+        border-top: 2px solid black;
+    }
+    #zoomtext {
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+
+ .scroll-top-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 99999999;
+    background-color: #777777;
+  color: #eeeeee;
+  width: 50px;
+  height: 48px;
+  line-height: 48px;
+  right: 30px;
+  bottom: 30px;
+  padding-top: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+  background-color: #888888;
+}
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+  opacity: 1.0;
+}
+.scroll-top-wrapper i.fa {
+  line-height: inherit;
+}
+
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+         <script src='https://100dayscss.com/codepen/js/jquery.min.js'></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#caiNavbar" aria-controls="caiNavbar" aria-expanded="false" aria-label="Toggle menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Accueil</a>
+        <img src="wifi.svg" style="width: 32px" />
+        <div class="navbar-collapse collapse" id="caiNavbar" style="">
+            <ul class="navbar-nav mr-auto fa-ul">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-home"></i></span>Accueil</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-chart-line"></i></span>Consommation</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-cog"></i></span>R&eacute;glages</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg far fa-clock"></i></span>Dur&eacute;e</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-info"></i></span>Aide</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-sign-out-alt"></i></span>D&eacute;connexion</a>
+                </li>
+                <span class="separ bold"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg far fa-question-circle"></i></span>Question</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-lock"></i></span>Confidentialit&eacute;</a>
+                </li>
+                <span class="separ"></span>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa-li"><i class="fa-lg fas fa-phone"></i></span>Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h3 style="color:#5fbae9 ;"><span>Planifier votre maison:</span></h3>
+<div class="container">
+	<div class="row"> 
+    <div class="dragImg" ><img width="30" src="http://placehold.it/30x50" style="margin-right: 30px;margin-left: 30px;"><p><span></span><span>Entrée</span></p></div>
+		<div class="dragImg" ><img width="80" src="http://placehold.it/80x80" style="margin-right: 30px;margin-left: 30px;"><p><span ></span><span>Toilette1</span></p></div>
+    <div class="dragImg"><img width="80" src="http://placehold.it/80x80" style="margin-right: 30px;margin-left: 30px;"><p><span></span><span>Toilette2</span></p></div>
+      <div class="dragImg"><img width="140" src="http://placehold.it/140x100" style="margin-right: 30px;margin-left: 30px;"><p><span></span><span>Chambre1</span></p></div>
+      <div class="dragImg"><img width="140" src="http://placehold.it/140x100" style="margin-right: 30px;margin-left: 30px;"><p><span></span><span>Chambre2</span></p></div>
+         <div class="dragImg"><img width="160" src="http://placehold.it/160x120" style="margin-right: 30px;margin-left: 30px;"><p><span></span><span>Salon</span></p></div>
+           <div class="dragImg"><img width="160" src="http://placehold.it/160x140" style="margin-right: 30px;margin-left: 30px;"><p><span></span><span>Cuisine</span></p></div>
+        <div id="dropHere" style="margin-top: 150px;display: block;
+  margin-left: auto;
+  margin-right: auto;"></div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+   $(function(){
+ //Make every clone image unique.
+   var counts = [0];
+   $(".dragImg").draggable({
+     helper: "clone",
+    //Create counter
+    start: function() { counts[0]++; }
+  });
+    $("#dropHere").droppable({
+       drop: function(e, ui){
+         
+   //Pointing to the dragImg class in dropHere and add new class.
+         $("#dropHere .dragImg").addClass("item-"+counts[0]).attr('id', "item-"+counts[0]).append("item-"+counts[0]);
+         //  ui.helper.attr('id', "item-"+counts[0]);
+       //  alert("count",counts[0]);
+          document.getElementById('count').innerHTML = counts[0];
+   //Remove the current class (ui-draggable and dragImg)
+         $("#dropHere .item-"+counts[0]).removeClass("dragImg ui-draggable ui-draggable-dragging");
+$(".item-"+counts[0]).dblclick(function() {
+$(this).remove();
+});
+//make the div draggable --- Not working???
+make_draggable($(".item-1"));
+}
+
+
+});
+var zIndex = 0;
+function make_draggable(elements)
+{
+	elements.draggable({
+		containment:'parent',
+		start:function(e,ui){ ui.helper.css('z-index',++zIndex); },
+		stop:function(e,ui){
+		}
+	});
+}
+});
+});  
+
+$(document).ready(function(){
+
+$(function(){
+ 
+    $(document).on( 'scroll', function(){
+ 
+      if ($(window).scrollTop() > 100) {
+      $('.scroll-top-wrapper').addClass('show');
+    } else {
+      $('.scroll-top-wrapper').removeClass('show');
+    }
+  });
+ 
+  $('.scroll-top-wrapper').on('click', scrollToTop);
+});
+ 
+function scrollToTop() {
+  verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+  element = $('body');
+  offset = element.offset();
+  offsetTop = offset.top;
+  $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+}
+
+});
+</script>
+
+<div class="scroll-top-wrapper ">
+  <span class="scroll-top-inner">
+    <i class="fa fa-2x fa-arrow-circle-up"></i>
+  </span>
+</div>
+
+
+   
+
+</body>
+</html>
